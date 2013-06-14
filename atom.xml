@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2013-06-14T17:45:18-04:00</updated>
+  <updated>2013-06-14T17:55:36-04:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -25,6 +25,12 @@ this is testing</p>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">def</span> <span class="n">test</span> <span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span>
 </span><span class='line'>  <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello World&quot;</span><span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span> (test.scala)</span> <a href='http://randybaek.github.io/downloads/code/test.scala'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="n">println</span><span class="o">(</span><span class="s">&quot;hello world&quot;</span><span class="o">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
