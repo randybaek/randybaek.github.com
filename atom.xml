@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Randy Baek' blog]]></title>
+  <title><![CDATA[Randy Baek blog]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2013-06-14T22:54:52-04:00</updated>
+  <updated>2013-06-14T22:58:47-04:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
