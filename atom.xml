@@ -4,7 +4,7 @@
   <title><![CDATA[Randy Baek]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2014-01-04T17:59:26-05:00</updated>
+  <updated>2014-01-04T18:00:44-05:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
@@ -20,7 +20,7 @@
     <id>http://randybaek.github.io/blog/2014/01/04/gist-testing</id>
     <content type="html"><![CDATA[<p>This is gist testing</p>
 
-<div><script src='https://gist.github.com/8bab0fd88ee5ba7880db.js'></script>
+<div><script src='https://gist.github.com/8bab0fd88ee5ba7880db.js?file=Generators.scala'></script>
 <noscript><pre><code>
   val integers = new Generator[Int] {
     def generate = scala.util.Random.nextInt()
