@@ -4,7 +4,7 @@
   <title><![CDATA[Randy Baek]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2014-01-04T17:26:41-05:00</updated>
+  <updated>2014-01-04T17:28:02-05:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
@@ -18,7 +18,7 @@
     <link href="http://randybaek.github.io/blog/2014/01/04/testing-korean/"/>
     <updated>2014-01-04T17:26:14-05:00</updated>
     <id>http://randybaek.github.io/blog/2014/01/04/testing-korean</id>
-    <content type="html"><![CDATA[<p>이것은 한국어 테스티입니다.</p>
+    <content type="html"><![CDATA[<p>이것은 한국어 테스트입니다.</p>
 ]]></content>
   </entry>
   
