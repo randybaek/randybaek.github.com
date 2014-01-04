@@ -4,7 +4,7 @@
   <title><![CDATA[Randy Baek]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2014-01-04T17:28:02-05:00</updated>
+  <updated>2014-01-04T17:58:00-05:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[gist_testing]]></title>
+    <link href="http://randybaek.github.io/blog/2014/01/04/gist-testing/"/>
+    <updated>2014-01-04T17:57:05-05:00</updated>
+    <id>http://randybaek.github.io/blog/2014/01/04/gist-testing</id>
+    <content type="html"><![CDATA[<p>This is gist testing</p>
+
+<div><script src='https://gist.github.com/e4037377c126b4637f62.js'></script>
+<noscript><pre><code>/**
+ * Created by wooyeolbaek on 1/2/14.
+ */
+
+object generator {
+  println(&quot;Welcome to the Scala worksheet&quot;)
+
+  val integers = new Generator[Int] {
+    def generate = scala.util.Random.nextInt()
+  }
+}</code></pre></noscript></div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[testing Korean]]></title>
