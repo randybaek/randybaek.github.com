@@ -4,7 +4,7 @@
   <title><![CDATA[Randy Baek]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2014-01-04T18:00:44-05:00</updated>
+  <updated>2014-02-12T16:23:29-05:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
@@ -14,43 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[gist_testing]]></title>
-    <link href="http://randybaek.github.io/blog/2014/01/04/gist-testing/"/>
-    <updated>2014-01-04T17:57:05-05:00</updated>
-    <id>http://randybaek.github.io/blog/2014/01/04/gist-testing</id>
-    <content type="html"><![CDATA[<p>This is gist testing</p>
-
-<div><script src='https://gist.github.com/8bab0fd88ee5ba7880db.js?file=Generators.scala'></script>
-<noscript><pre><code>
-  val integers = new Generator[Int] {
-    def generate = scala.util.Random.nextInt()
-  }</code></pre></noscript></div>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[testing Korean]]></title>
-    <link href="http://randybaek.github.io/blog/2014/01/04/testing-korean/"/>
-    <updated>2014-01-04T17:26:14-05:00</updated>
-    <id>http://randybaek.github.io/blog/2014/01/04/testing-korean</id>
-    <content type="html"><![CDATA[<p>이것은 한국어 테스트입니다.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[This is testing]]></title>
-    <link href="http://randybaek.github.io/blog/2013/12/23/this-is-testing/"/>
-    <updated>2013-12-23T15:43:04-05:00</updated>
-    <id>http://randybaek.github.io/blog/2013/12/23/this-is-testing</id>
-    <content type="html"><![CDATA[<p>Hello World</p>
-
-<figure class='code'><figcaption><span>Scala testing </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">def</span> <span class="n">testing</span><span class="k">:</span> <span class="kt">test</span> <span class="o">=</span> <span class="n">println</span><span class="o">(</span><span class="s">&quot;hi&quot;</span><span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
+    <title type="html"><![CDATA[Will be updated soon. :)]]></title>
+    <link href="http://randybaek.github.io/blog/2014/02/12/will-be-updated-soon/"/>
+    <updated>2014-02-12T16:22:37-05:00</updated>
+    <id>http://randybaek.github.io/blog/2014/02/12/will-be-updated-soon</id>
+    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
