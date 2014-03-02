@@ -108,7 +108,7 @@ $(document).ready(
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do basic sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need API key to get authentication to use RESTful API service. For now, just email to <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#114;&#x62;&#97;&#101;&#x6b;&#x40;&#114;&#101;&#x76;&#x65;&#97;&#108;&#x65;&#100;&#99;&#x6f;&#110;&#116;&#101;&#x78;&#116;&#46;&#99;&#x6f;&#109;">&#114;&#98;&#x61;&#101;&#107;&#x40;&#x72;&#x65;&#x76;&#x65;&#97;&#108;&#x65;&#100;&#x63;&#111;&#110;&#116;&#101;&#120;&#116;&#x2e;&#x63;&#111;&#x6d;</a> and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need API key to get authentication to use RESTful API service. For now, just email to <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#114;&#x62;&#x61;&#101;&#x6b;&#64;&#114;&#x65;&#x76;&#101;&#x61;&#x6c;&#101;&#x64;&#99;&#111;&#x6e;&#x74;&#x65;&#120;&#x74;&#x2e;&#99;&#x6f;&#x6d;">&#114;&#98;&#x61;&#101;&#107;&#x40;&#x72;&#x65;&#118;&#x65;&#97;&#x6c;&#x65;&#x64;&#99;&#x6f;&#110;&#x74;&#101;&#x78;&#x74;&#46;&#x63;&#x6f;&#109;</a> and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you optain the key, you&rsquo;re all set!</p>
 
@@ -118,15 +118,15 @@ $(document).ready(
 
 <p>Create URL call,</p>
 
-<blockquote><p>Method URL: <a href="http://beta.conveyapi.com/analysis-engine/process">http://beta.conveyapi.com/analysis-engine/process</a></p>
-
-<ul>
+<blockquote><ul>
+<li>Method URL: <a href="http://beta.conveyapi.com/analysis-engine/process">http://beta.conveyapi.com/analysis-engine/process</a></li>
 <li>Method Actions: GET, POST</li>
-<li>Parameters: api_key, text, annotation.eotion
-Your final URL will be like this.
-<a href="http://beta.conveyapi.com/analysis-engine/process?api_key=">http://beta.conveyapi.com/analysis-engine/process?api_key=</a><YourAPIKey>&amp;text=the%20service%20wasn%27t%20the%20best%20but%20the%20food%20more%20than%20made%20up%20for%20it&amp;annotation.emotion=true</li>
+<li>Parameters: api_key, text, annotation.eotion</li>
 </ul>
-</blockquote>
+
+
+<p>Your final URL will be like this.
+<a href="http://beta.conveyapi.com/analysis-engine/process?api_key=">http://beta.conveyapi.com/analysis-engine/process?api_key=</a><YourAPIKey>&amp;text=the%20service%20wasn%27t%20the%20best%20but%20the%20food%20more%20than%20made%20up%20for%20it&amp;annotation.emotion=true</p></blockquote>
 
 <p>And this will return response in Json format like below.</p>
 
