@@ -108,7 +108,7 @@ $(document).ready(
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do basic sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need API key to get authentication to use RESTful API service. For now, just email to <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x72;&#98;&#97;&#101;&#107;&#x40;&#114;&#101;&#118;&#x65;&#x61;&#x6c;&#101;&#x64;&#x63;&#x6f;&#x6e;&#x74;&#101;&#x78;&#x74;&#x2e;&#x63;&#111;&#109;">&#x72;&#98;&#x61;&#x65;&#107;&#64;&#114;&#101;&#118;&#101;&#x61;&#x6c;&#101;&#x64;&#x63;&#x6f;&#x6e;&#116;&#101;&#120;&#x74;&#x2e;&#x63;&#x6f;&#109;</a> and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need API key to get authentication to use RESTful API service. For now, just email to <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x72;&#x62;&#97;&#x65;&#x6b;&#64;&#114;&#x65;&#118;&#x65;&#x61;&#108;&#x65;&#100;&#x63;&#111;&#x6e;&#x74;&#x65;&#120;&#x74;&#x2e;&#x63;&#x6f;&#109;">&#x72;&#98;&#97;&#101;&#107;&#x40;&#114;&#x65;&#118;&#x65;&#x61;&#108;&#x65;&#100;&#99;&#111;&#x6e;&#x74;&#x65;&#120;&#116;&#x2e;&#x63;&#x6f;&#x6d;</a> and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you optain the key, you&rsquo;re all set!</p>
 
@@ -123,6 +123,8 @@ $(document).ready(
 <p>And this will return response in Json format like below.</p>
 
 <p>{&ldquo;status&rdquo;:{&ldquo;code&rdquo;:200,&ldquo;limit_remaining&rdquo;:10000,&ldquo;limit_reset_in&rdquo;:0},&ldquo;documents&rdquo;:[{&ldquo;text&rdquo;:&ldquo;the service wasn&rsquo;t the best but the food more than made up for it&rdquo;,&ldquo;annotations&rdquo;:{&ldquo;polarity&rdquo;:{&ldquo;value&rdquo;:&ldquo;positive&rdquo;,&ldquo;confidence&rdquo;:0.5045456270481515},&ldquo;emotion&rdquo;:{&ldquo;value&rdquo;:&ldquo;joy&rdquo;,&ldquo;confidence&rdquo;:0.5500874491395605},&ldquo;intensity&rdquo;:{&ldquo;value&rdquo;:&ldquo;none&rdquo;,&ldquo;confidence&rdquo;:0.08155536956146558},&ldquo;spam&rdquo;:{&ldquo;value&rdquo;:&ldquo;not spam&rdquo;,&ldquo;confidence&rdquo;:0.9476913644857465}}}]}</p>
+
+<p>For more details on our parameter, please refer to active docs, <a href="https://developer.conveyapi.com/docs">https://developer.conveyapi.com/docs</a></p>
 
 <p>If you want to create your own classifier using your data set, visit use concour (<a href="http://concur.conveyapi.com/">http://concur.conveyapi.com/</a>), and create your own model for ConveyAPI. It will be covered next blog post.</p>
 </div>
