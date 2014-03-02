@@ -4,7 +4,7 @@
   <title><![CDATA[Randy Baek]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2014-03-02T17:46:29-05:00</updated>
+  <updated>2014-03-02T17:52:55-05:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
@@ -18,7 +18,7 @@
     <link href="http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi/"/>
     <updated>2014-03-02T15:35:45-05:00</updated>
     <id>http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi</id>
-    <content type="html"><![CDATA[<p>Revealed Context provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy. Machine learning approaches allow computers to detect patterns from large amounts of data. You can use human analysts to identify by hand the relevant records with the word “Coke” vs. the records that are discussing drugs or steel processing. You could even segregate the records that truly are discussing the brand vs. those that say, “5 pm—ready for my rum and coke!” Once you accumulate enough human-coded training data, the machine learning technology can discern the patterns that separate the relevant from the irrelevant. Similarly, machine learning can more accurately separate the positive from the negative sentiment.</p>
+    <content type="html"><![CDATA[<p><a href="http://revealedcontext.com">Revealed Context</a> provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy. Machine learning approaches allow computers to detect patterns from large amounts of data. You can use human analysts to identify by hand the relevant records with the word “Coke” vs. the records that are discussing drugs or steel processing. You could even segregate the records that truly are discussing the brand vs. those that say, “5 pm—ready for my rum and coke!” Once you accumulate enough human-coded training data, the machine learning technology can discern the patterns that separate the relevant from the irrelevant. Similarly, machine learning can more accurately separate the positive from the negative sentiment.</p>
 
 <p>That’s what Revealed Context technology can do.</p>
 
@@ -32,7 +32,7 @@
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do general sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need API key to get authenticated for REST API service use. For now, just email me (<a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#114;&#98;&#97;&#x65;&#107;&#64;&#114;&#101;&#x76;&#101;&#97;&#108;&#x65;&#100;&#99;&#x6f;&#110;&#x74;&#x65;&#x78;&#116;&#46;&#x63;&#x6f;&#109;">&#x72;&#98;&#97;&#101;&#x6b;&#x40;&#x72;&#x65;&#x76;&#101;&#97;&#x6c;&#101;&#100;&#99;&#111;&#x6e;&#x74;&#x65;&#x78;&#x74;&#46;&#x63;&#111;&#x6d;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need API key to get authenticated for REST API service use. For now, just email me (<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#114;&#98;&#97;&#x65;&#107;&#x40;&#114;&#101;&#x76;&#101;&#x61;&#x6c;&#101;&#x64;&#99;&#111;&#110;&#x74;&#101;&#x78;&#x74;&#46;&#x63;&#x6f;&#x6d;">&#114;&#x62;&#97;&#101;&#107;&#64;&#114;&#101;&#x76;&#x65;&#97;&#108;&#x65;&#100;&#x63;&#x6f;&#x6e;&#116;&#101;&#120;&#x74;&#46;&#99;&#111;&#109;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you obtain the key, you&rsquo;re all set!</p>
 
