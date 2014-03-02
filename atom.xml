@@ -4,7 +4,7 @@
   <title><![CDATA[Randy Baek]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2014-03-02T17:00:52-05:00</updated>
+  <updated>2014-03-02T17:06:47-05:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
@@ -32,7 +32,7 @@
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do general sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need API key to get authenticated for REST API service use. For now, just email me (<a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x72;&#98;&#97;&#x65;&#x6b;&#x40;&#114;&#101;&#118;&#101;&#x61;&#108;&#101;&#x64;&#99;&#111;&#x6e;&#116;&#x65;&#x78;&#x74;&#x2e;&#x63;&#111;&#x6d;">&#114;&#98;&#97;&#101;&#107;&#64;&#114;&#101;&#118;&#x65;&#97;&#x6c;&#x65;&#100;&#99;&#x6f;&#x6e;&#116;&#101;&#x78;&#116;&#46;&#99;&#x6f;&#109;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need API key to get authenticated for REST API service use. For now, just email me (<a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#114;&#98;&#x61;&#101;&#x6b;&#x40;&#114;&#x65;&#x76;&#101;&#x61;&#108;&#101;&#100;&#x63;&#x6f;&#110;&#x74;&#101;&#x78;&#116;&#x2e;&#x63;&#111;&#109;">&#114;&#98;&#97;&#x65;&#107;&#x40;&#x72;&#x65;&#118;&#x65;&#97;&#x6c;&#x65;&#100;&#99;&#x6f;&#x6e;&#x74;&#x65;&#x78;&#116;&#x2e;&#x63;&#x6f;&#x6d;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you optain the key, you&rsquo;re all set!</p>
 
@@ -122,6 +122,105 @@ Note that batch array must be indexed starting with 0, and moving up sequentiall
 
 <blockquote><p>curl -v -X POST &ldquo;<a href="http://beta.conveyapi.com/analysis-engine/process-batch">http://beta.conveyapi.com/analysis-engine/process-batch</a>&rdquo; -d
 &ldquo;api_key=<YourAPIKey>&amp;annotation.level=document&amp;annotation.polarity=true&amp;annotation.emotion=true&amp;annotation.intensity=true&amp;annotation.spam=true&amp;batch[0].text=In the Grand Canyon, Arizona has a natural wonder which, so far as I know, is in kind absolutely unparalleled throughout the rest of the world. I want to ask you to do one thing in connection with it in your own interest and in the interest of the country &ndash; to keep this great wonder of nature as it now is.&amp;batch[1].text=I was delighted to learn of the wisdom of the Santa Fe railroad people in deciding not to build their hotel on the brink of the canyon. I hope you will not have a building of any kind, not a summer cottage, a hotel, or anything else, to mar the wonderful grandeur, the sublimity, the great loneliness and beauty of the canyon.&rdquo;</p></blockquote>
+
+<figure class='code'><figcaption><span>ConveyAPI batch response </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span>
+</span><span class='line'>   <span class="nt">&quot;status&quot;</span><span class="p">:{</span>
+</span><span class='line'>      <span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;limit_remaining&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span>
+</span><span class='line'>      <span class="nt">&quot;limit_reset_in&quot;</span><span class="p">:</span><span class="mi">46077</span>
+</span><span class='line'>   <span class="p">},</span>
+</span><span class='line'>   <span class="nt">&quot;document&quot;</span><span class="p">:[</span>
+</span><span class='line'>      <span class="p">{</span>
+</span><span class='line'>         <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;In the Grand Canyon, Arizona has a natural wonder which, so far as I know, is in kind absolutely unparalleled throughout the rest of the world. I want to ask you to do one thing in connection with it in your own interest and in the interest of the country - to keep this great wonder of nature as it now is.&quot;</span><span class="p">,</span>
+</span><span class='line'>         <span class="nt">&quot;incidents&quot;</span><span class="p">:[</span>
+</span><span class='line'>            <span class="p">{</span>
+</span><span class='line'>               <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;In the Grand Canyon, Arizona has a natural wonder which, so far as I know, is in kind absolutely unparalleled throughout the rest of the world.&quot;</span><span class="p">,</span>
+</span><span class='line'>               <span class="nt">&quot;annotations&quot;</span><span class="p">:{</span>
+</span><span class='line'>                  <span class="nt">&quot;polarity&quot;</span><span class="p">:{</span>
+</span><span class='line'>                     <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;positive&quot;</span><span class="p">,</span>
+</span><span class='line'>                     <span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="mf">0.5156486527058417</span>
+</span><span class='line'>                  <span class="p">},</span>
+</span><span class='line'>                  <span class="nt">&quot;emotion&quot;</span><span class="p">:{</span>
+</span><span class='line'>                     <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;trust&quot;</span><span class="p">,</span>
+</span><span class='line'>                     <span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="mf">0.32733411410499424</span>
+</span><span class='line'>                  <span class="p">},</span>
+</span><span class='line'>                  <span class="nt">&quot;intensity&quot;</span><span class="p">:{</span>
+</span><span class='line'>                     <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;high&quot;</span><span class="p">,</span>
+</span><span class='line'>                     <span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="mf">0.5652417899925344</span>
+</span><span class='line'>                  <span class="p">}</span>
+</span><span class='line'>               <span class="p">}</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="p">{</span>
+</span><span class='line'>               <span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="s2">&quot;I want to ask you to do one thing in connection with it in your own interest and in the interest of the country - to keep this great wonder of nature as it now is.&quot;</span><span class="p">,</span>
+</span><span class='line'>               <span class="nt">&quot;annotations&quot;</span><span class="p">:{</span>
+</span><span class='line'>                  <span class="nt">&quot;polarity&quot;</span><span class="p">:{</span>
+</span><span class='line'>                     <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;neutral&quot;</span><span class="p">,</span>
+</span><span class='line'>                     <span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="mf">0.38774865652781143</span>
+</span><span class='line'>                  <span class="p">},</span>
+</span><span class='line'>                  <span class="nt">&quot;emotion&quot;</span><span class="p">:{</span>
+</span><span class='line'>                     <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;anticipation&quot;</span><span class="p">,</span>
+</span><span class='line'>                     <span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="mf">0.4216058615724756</span>
+</span><span class='line'>                  <span class="p">},</span>
+</span><span class='line'>                  <span class="nt">&quot;intensity&quot;</span><span class="p">:{</span>
+</span><span class='line'>                     <span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;medium&quot;</span><span class="p">,</span>
+</span><span class='line'>                     <span class="nt">&quot;confidence&quot;</span><span class="p">:</span><span class="mf">0.2770963713842089</span>
+</span><span class='line'>                  <span class="p">}</span>
+</span><span class='line'>               <span class="p">}</span>
+</span><span class='line'>            <span class="p">}</span>
+</span><span class='line'>         <span class="p">]</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>   <span class="p">]</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>For more details on parameters, please refer to <a href="https://developer.conveyapi.com/docs">active docs</a></p>
 
