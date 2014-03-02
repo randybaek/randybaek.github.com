@@ -4,7 +4,7 @@
   <title><![CDATA[Randy Baek]]></title>
   <link href="http://randybaek.github.io/atom.xml" rel="self"/>
   <link href="http://randybaek.github.io/"/>
-  <updated>2014-02-16T15:38:46-05:00</updated>
+  <updated>2014-03-02T15:40:14-05:00</updated>
   <id>http://randybaek.github.io/</id>
   <author>
     <name><![CDATA[Randy Baek]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getting started with ConveyAPI]]></title>
+    <link href="http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi/"/>
+    <updated>2014-03-02T15:35:45-05:00</updated>
+    <id>http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi</id>
+    <content type="html"><![CDATA[<p>Revealed Context provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy. Machine learning approaches allow computers to detect patterns from large amounts of data. In the example above, you can use human analysts to identify by hand the relevant records with the word “Coke” vs. the records that are discussing drugs or steel processing. You could even segregate the records that truly are discussing the brand vs. those that say, “5 pm—ready for my rum and coke!” Once you accumulate enough human-coded training data, the machine learning technology can discern the patterns that separate the relevant from the irrelevant. Similarly, machine learning can more accurately separate the positive from the negative sentiment.</p>
+
+<p>That’s what Revealed Context technology can do.</p>
+
+<p>Revealed Context offers two different technologies, both of which use state-of-the-art text analytics and machine learning techniques to analyze social media data:
+* Concur. Train your relevancy model to quickly create a custom classifier to separate relevant vs. irrelevant data.
+* Convey. Use our models trained with hundreds of thousands of coded social media conversations to detect sentiment, emotion, and more.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Will be updated soon :)]]></title>
