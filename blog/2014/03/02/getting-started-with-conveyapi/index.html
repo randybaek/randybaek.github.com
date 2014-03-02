@@ -5,7 +5,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>Getting started with ConveyAPI  | Randy Baek</title>
+	<title>Getting started with ConveyAPI - Part 1.  | Randy Baek</title>
 
 <meta name="author" content="Randy Baek"> 
 
@@ -93,14 +93,38 @@ $(document).ready(
 </header>
 
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Getting Started With ConveyAPI</h2>
+	<h2 class="title">Getting Started With ConveyAPI - Part 1.</h2>
 	<div class="entry-content"><p>Revealed Context provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy. Machine learning approaches allow computers to detect patterns from large amounts of data. In the example above, you can use human analysts to identify by hand the relevant records with the word “Coke” vs. the records that are discussing drugs or steel processing. You could even segregate the records that truly are discussing the brand vs. those that say, “5 pm—ready for my rum and coke!” Once you accumulate enough human-coded training data, the machine learning technology can discern the patterns that separate the relevant from the irrelevant. Similarly, machine learning can more accurately separate the positive from the negative sentiment.</p>
 
 <p>That’s what Revealed Context technology can do.</p>
 
-<p>Revealed Context offers two different technologies, both of which use state-of-the-art text analytics and machine learning techniques to analyze social media data:
-&ndash; Concur. Train your relevancy model to quickly create a custom classifier to separate relevant vs. irrelevant data.
-&ndash; Convey. Use our models trained with hundreds of thousands of coded social media conversations to detect sentiment, emotion, and more.</p>
+<p>Revealed Context offers two different technologies, both of which use state-of-the-art text analytics and machine learning techniques to analyze social media data:</p>
+
+<ul>
+<li>Concur. Train your relevancy model to quickly create a custom classifier to separate relevant vs. irrelevant data.</li>
+<li>Convey. Use our models trained with hundreds of thousands of coded social media conversations to detect sentiment, emotion, and more.</li>
+</ul>
+
+
+<p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do basic sentment analysis, such as polarity, emotion, intensity, and spam.</p>
+
+<p>First, you need API key to get authentication to use RESTful API service. For now, just email to <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x72;&#98;&#97;&#101;&#107;&#x40;&#114;&#101;&#118;&#x65;&#x61;&#x6c;&#101;&#x64;&#x63;&#x6f;&#x6e;&#x74;&#101;&#x78;&#x74;&#x2e;&#x63;&#111;&#109;">&#x72;&#98;&#x61;&#x65;&#107;&#64;&#114;&#101;&#118;&#101;&#x61;&#x6c;&#101;&#x64;&#x63;&#x6f;&#x6e;&#116;&#101;&#120;&#x74;&#x2e;&#x63;&#x6f;&#109;</a> and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+
+<p>Once you optain the key, you&rsquo;re all set!</p>
+
+<p>If you want to analyze your text,</p>
+
+<p>&ldquo;the service wasn&rsquo;t the best but the food more than made up for it&rdquo;</p>
+
+<p>create url like,</p>
+
+<p><a href="http://beta.conveyapi.com/analysis-engine/process?api_key=">http://beta.conveyapi.com/analysis-engine/process?api_key=</a><YourAPIKey>&amp;text=the%20service%20wasn%27t%20the%20best%20but%20the%20food%20more%20than%20made%20up%20for%20it&amp;annotation.emotion=true</p>
+
+<p>And this will return response in Json format like below.</p>
+
+<p>{&ldquo;status&rdquo;:{&ldquo;code&rdquo;:200,&ldquo;limit_remaining&rdquo;:10000,&ldquo;limit_reset_in&rdquo;:0},&ldquo;documents&rdquo;:[{&ldquo;text&rdquo;:&ldquo;the service wasn&rsquo;t the best but the food more than made up for it&rdquo;,&ldquo;annotations&rdquo;:{&ldquo;polarity&rdquo;:{&ldquo;value&rdquo;:&ldquo;positive&rdquo;,&ldquo;confidence&rdquo;:0.5045456270481515},&ldquo;emotion&rdquo;:{&ldquo;value&rdquo;:&ldquo;joy&rdquo;,&ldquo;confidence&rdquo;:0.5500874491395605},&ldquo;intensity&rdquo;:{&ldquo;value&rdquo;:&ldquo;none&rdquo;,&ldquo;confidence&rdquo;:0.08155536956146558},&ldquo;spam&rdquo;:{&ldquo;value&rdquo;:&ldquo;not spam&rdquo;,&ldquo;confidence&rdquo;:0.9476913644857465}}}]}</p>
+
+<p>If you want to create your own classifier using your data set, visit use concour (<a href="http://concur.conveyapi.com/">http://concur.conveyapi.com/</a>), and create your own model for ConveyAPI. It will be covered next blog post.</p>
 </div>
 
 
