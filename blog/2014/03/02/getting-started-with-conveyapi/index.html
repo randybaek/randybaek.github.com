@@ -109,7 +109,7 @@ $(document).ready(
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do general sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#114;&#x62;&#97;&#101;&#x6b;&#64;&#x72;&#x65;&#x76;&#101;&#97;&#108;&#101;&#100;&#99;&#x6f;&#110;&#x74;&#x65;&#x78;&#x74;&#46;&#x63;&#x6f;&#x6d;">&#114;&#x62;&#97;&#101;&#x6b;&#64;&#114;&#101;&#118;&#x65;&#x61;&#x6c;&#101;&#100;&#99;&#111;&#x6e;&#116;&#x65;&#x78;&#x74;&#46;&#x63;&#111;&#x6d;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#114;&#x62;&#97;&#101;&#x6b;&#64;&#114;&#x65;&#x76;&#x65;&#x61;&#x6c;&#101;&#x64;&#99;&#111;&#x6e;&#x74;&#101;&#120;&#116;&#x2e;&#x63;&#111;&#x6d;">&#114;&#x62;&#x61;&#101;&#107;&#x40;&#114;&#x65;&#x76;&#101;&#97;&#x6c;&#x65;&#x64;&#x63;&#111;&#110;&#116;&#101;&#120;&#x74;&#x2e;&#x63;&#111;&#x6d;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you obtain the key, you&rsquo;re all set!</p>
 
@@ -128,7 +128,10 @@ $(document).ready(
 
 <p>Your final URL will be like this.</p>
 
-<blockquote><p><a href="http://beta.conveyapi.com/analysis-engine/process?api_key=YourAPIKey&amp;text=the+service+wasn%27t+the+best+but+the+food+more+than+made+up+for+it&amp;annotation.emotion=true">http://beta.conveyapi.com/analysis-engine/process?api_key=YourAPIKey&amp;text=the+service+wasn%27t+the+best+but+the+food+more+than+made+up+for+it&amp;annotation.emotion=true</a></p></blockquote>
+<pre>
+http://beta.conveyapi.com/analysis-engine/process?api_key=YourAPIKey&text=the+service+wasn%27t+the+best+but+the+food+more+than+made+up+for+it&annotation.emotion=true
+</pre>
+
 
 <p>And this will return response in Json format like below.</p>
 
@@ -200,7 +203,12 @@ $(document).ready(
 <p>You can also send us request in batch mode, just using Method URL <a href="http://beta.conveyapi.com/analysis-engine/process-batch">http://beta.conveyapi.com/analysis-engine/process-batch</a>
 Note that batch array must be indexed starting with 0, and moving up sequentially. For example,</p>
 
-<blockquote><p>curl -v -X POST &ldquo;<a href="http://ubervu.conveyapi.com/analysis-engine/process">http://ubervu.conveyapi.com/analysis-engine/process</a>&rdquo; -d &ldquo;api_key=&lt;YourAPIKey>&amp;annotation.level=sentence&amp;annotation.polarity=true&amp;annotation.emotion=true&amp;annotation.intensity=true&amp;annotation.spam=true&amp;text=In+the+Grand+Canyon%2C+Arizona+has+a+natural+wonder+which%2C+so+far+as+I+know%2C+is+in+kind+absolutely+unparalleled+throughout+the+rest+of+the+world.+I+want+to+ask+you+to+do+one+thing+in+connection+with+it+in+your+own+interest+and+in+the+interest+of+the+country+&ndash;+to+keep+this+great+wonder+of+nature+as+it+now+is.&rdquo;</p></blockquote>
+<pre>
+> curl -v -X POST "http://ubervu.conveyapi.com/analysis-engine/process" -d "api_key=YourAPIKey&annotation.level=sentence&annotation.polarity=true&annotation.emotion=true&annotation.intensity=true&annotation.spam=true&text=In+the+Grand+Canyon%2C+Arizona+has+a+natural+wonder+which%2C+so+far+as+I+know%2C+is+in+kind+absolutely+unparalleled+throughout+the+rest+of+the+world.+I+want+to+ask+you+to+do+one+thing+in+connection+with+it+in+your+own+interest+and+in+the+interest+of+the+country+-+to+keep+this+great+wonder+of+nature+as+it+now+is."
+</pre>
+
+
+
 
 <figure class='code'><figcaption><span>ConveyAPI batch response </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
