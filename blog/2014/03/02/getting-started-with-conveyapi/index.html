@@ -1,103 +1,174 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
-	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	<meta charset="utf-8">
-	<title>Getting started with ConveyAPI - Part 1.  | Randy Baek</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Randy Baek">
+  <meta name="description" content="Randy Baek">
 
-<meta name="author" content="Randy Baek"> 
+  
+    <title>Getting started with ConveyAPI - Part 1. - Randy Baek</title>
+  
 
-<meta name="description" content="Revealed Context provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy &hellip;"> <meta name="keywords" content="">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="description" content="Revealed Context provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy &hellip;">
+  
 
-	<link href="/atom.xml" rel="alternate" title="Randy Baek" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
 
-<script language="Javascript" type="text/javascript">
-$(document).ready(
-  function() {
-    (function($) {
-      $(".fancybox[data-content-id]").each(function() {
-        this.href = $(this).data('content-id');
-      });
-      $(".fancybox").fancybox({
-        beforeLoad: function() {
-          var el, 
-              id = $(this.element).data('title-id');
 
-          if (id) {
-            el = $('#' + id);
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            if (el.length) {
-              this.title = el.html();
-            }
-          }
-          if ($(this).data('content')) {
-            this.content = $(this).data('content');
-          }
-        },
-        helpers: {
-          title: {
-            type: 'inside'
-          }
-        }
-      });
-    })(jQuery);
-  }
-);
-</script>
+  
+  <link rel="canonical" href="http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi">
+  <link href="/favicon.ico" rel="icon">
+  <script type="text/javascript" src="http://use.typekit.com/zcp2xbp.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Randy Baek" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-	
+  
+
 </head>
 
 
-<body>
+<body   >
+
+	<div class="container">
+
+		<div class="four columns">
+  			<nav role="navigation"><ul class="title">
+  <li><a href="/">Randy Baek</a></li>
+</ul>
+  
+<ul class="main-navigation">
+
+  <li class="other"><a href="/">Blog</a></li>
+  <li class="other"><a target="_blank" href="http://linkedin.com/in/randybaek">About</a></li>
+  <li class="other"><a target="_blank" href="http://randybaek.tumblr.com/">Korean</a></li>
+</ul>
+
+
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:randybaek.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+
+
+
+</nav>
+        <aside class="sidebar">
+          
+            <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
     
-	<header id="header" class="inner"><h1><a href="/">Randy Baek</a></h1>
-<h4></h4>
-<nav id="main-nav"><ul>
-	<li><a href="/">Blog</a></li>
-	<li><a href="https://www.linkedin.com/in/randybaek">About</a></li>
-	<li><a href="/archives">Archive</a></li>
-	<li><a href="http://randybaek.tumblr.com/">Korean</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul>
-	<li><a href="/">Blog</a></li>
-	<li><a href="https://www.linkedin.com/in/randybaek">About</a></li>
-	<li><a href="/archives">Archive</a></li>
-	<li><a href="http://randybaek.tumblr.com/">Korean</a></li>
-</ul>
+      <li class="post">
+        <a href="/blog/2014/04/14/using-type-either-for-managing-responses/">Using type Either for managing Responses</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/02/getting-started-with-conveyapi/">Getting started with ConveyAPI - Part 1.</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/06/01/this-is-a-test/">This is post</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/randybaek">@randybaek</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'randybaek',
+            count: 2,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+          
+
+          <section id="code">
+            <h2>Code</h2>
+              <p><a target="_blank" href="https://github.com/randybaek" target="_blank">GitHub</a></p>         
+          </section>
+
+        </aside>    
+  	</div>
+    
+    
+
+  	<div id="main" class="twelve columns">
+	    <div id="content">
+	      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Getting Started With ConveyAPI - Part 1.</h1>
+    
+    
+      <p class="meta">
+        
+      </p>
+    
+  </header>
+
+
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi/" data-via="randy_baek" data-counturl="http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi/" >Tweet</a>
+  
+  
+  
 </div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="http://google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:randybaek.github.io">
-			</form>
-		</div>
-	</div>
-</nav>
+
+    
 
 
-</header>
-
-	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Getting Started With ConveyAPI - Part 1.</h2>
-	<div class="entry-content"><p><a href="http://revealedcontext.com">Revealed Context</a> provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy. Machine learning approaches allow computers to detect patterns from large amounts of data. You can use human analysts to identify by hand the relevant records with the word “Coke” vs. the records that are discussing drugs or steel processing. You could even segregate the records that truly are discussing the brand vs. those that say, “5 pm—ready for my rum and coke!” Once you accumulate enough human-coded training data, the machine learning technology can discern the patterns that separate the relevant from the irrelevant. Similarly, machine learning can more accurately separate the positive from the negative sentiment.</p>
+<div class="entry-content"><p><a href="http://revealedcontext.com">Revealed Context</a> provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy. Machine learning approaches allow computers to detect patterns from large amounts of data. You can use human analysts to identify by hand the relevant records with the word “Coke” vs. the records that are discussing drugs or steel processing. You could even segregate the records that truly are discussing the brand vs. those that say, “5 pm—ready for my rum and coke!” Once you accumulate enough human-coded training data, the machine learning technology can discern the patterns that separate the relevant from the irrelevant. Similarly, machine learning can more accurately separate the positive from the negative sentiment.</p>
 
 <p>That’s what Revealed Context technology can do.</p>
 
@@ -111,7 +182,7 @@ $(document).ready(
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do general sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#114;&#98;&#97;&#x65;&#x6b;&#64;&#114;&#x65;&#x76;&#101;&#97;&#108;&#x65;&#x64;&#x63;&#111;&#x6e;&#116;&#x65;&#120;&#116;&#46;&#99;&#x6f;&#109;">&#x72;&#x62;&#97;&#x65;&#x6b;&#x40;&#114;&#x65;&#118;&#x65;&#x61;&#108;&#x65;&#100;&#99;&#x6f;&#110;&#116;&#101;&#x78;&#116;&#x2e;&#99;&#111;&#109;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#114;&#98;&#97;&#101;&#107;&#64;&#x72;&#101;&#118;&#x65;&#x61;&#x6c;&#101;&#x64;&#99;&#111;&#110;&#116;&#101;&#x78;&#116;&#x2e;&#99;&#x6f;&#x6d;">&#114;&#x62;&#97;&#101;&#107;&#x40;&#114;&#101;&#118;&#101;&#x61;&#108;&#101;&#x64;&#99;&#x6f;&#110;&#116;&#x65;&#x78;&#116;&#x2e;&#x63;&#x6f;&#x6d;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you obtain the key, you&rsquo;re all set!</p>
 
@@ -315,61 +386,37 @@ curl -v -X POST "http://ubervu.conveyapi.com/analysis-engine/process" -d "api_ke
 </div>
 
 
-<div class="meta">
-	<div class="date">
+  <footer>
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/06/01/this-is-a-test/" title="Previous Post: This is post">&laquo; Previous post</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/04/14/using-type-either-for-managing-responses/" title="next Post: Using type Either for managing Responses">Next post &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T15:35:45-05:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time></div>
-	
-
-
-	
-</div></article>
-
-	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-<!---	<a class="addthis_counter addthis_pill_style"></a> --->
-	</div>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
-</div>
-
-
-
-<section id="comment">
-    <h2 class="title">Comments</h2>
+  <section>
+    <h1 class="comments">Comments</h1>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-</section>
+  </section>
+
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2014
 
-    Randy Baek
-
-<br>
-Powered by Octopress.
+	    </div>
+  	</div>
+  
+  <footer role="contentinfo"  class="sixteen columns"><center>
+<p class="credit">
+  <span class="credit">Powered by <a href="http://github.com">GitHub</a>, <a href="https://github.com/imathis/octopress">Octopress</a>, &amp; <a href="https://github.com/dhgamache/Skeleton">Skeleton</a></span>.
+</p>
+</center>
 </footer>
-	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
-
+  
+  
 
 <script type="text/javascript">
       var disqus_shortname = 'randybaek';
@@ -382,7 +429,7 @@ Powered by Octopress.
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -391,5 +438,32 @@ Powered by Octopress.
 
 
 
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+<script>
+  jQuery.noConflict()('li.other').hover (
+    function () {
+    jQuery.noConflict()(this).toggleClass("current-menu-item")
+  });
+</script>
+
 </body>
 </html>
+
+
+	</div> <!-- container -->
