@@ -67,6 +67,14 @@ function showTwitterFeed(tweets, twitter_user) {
   timeline.innerHTML = content;
 }
 
+function setHeader(xhr) {
+    if(xhr && xhr.overrideMimeType) {
+        xhr.overrideMimeType("application/j-son;charset=UTF-8");
+    }
+
+   xhr.setRequestHeader('Authorization', 'OAuth oauth_consumer_key="iutt5fCX1RK2G5MO6fiykuB2K", oauth_nonce="ab22e4b024933aadfc69f1d72ecc9d58", oauth_signature="aTSKfWiFk8y3GbNSrQ7ey%2BrNcpg%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1397661274", oauth_token="48905323-5i8Qre6GAKcut8eqz9OzBf2NQglrkRd9pZLTT2WBV", oauth_version="1.0"');
+}
+
 function getTwitterFeed(user, count, replies) {
   count = parseInt(count, 10);
   $.ajax({
@@ -74,9 +82,8 @@ function getTwitterFeed(user, count, replies) {
     , type: 'jsonp'
     , error: function (err) { $('#tweets li.loading').addClass('error').text("Twitter's busted"); }
     , success: function(data) { showTwitterFeed(data.slice(0, count), user); }
-    , beforeSend: function(request) { 
-        request.setRequestHeader('Authorization', 'OAuth oauth_consumer_key="iutt5fCX1RK2G5MO6fiykuB2K", oauth_nonce="ab22e4b024933aadfc69f1d72ecc9d58", oauth_signature="aTSKfWiFk8y3GbNSrQ7ey%2BrNcpg%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1397661274", oauth_token="48905323-5i8Qre6GAKcut8eqz9OzBf2NQglrkRd9pZLTT2WBV", oauth_version="1.0"');
-
-      }
-  })
+    , beforeSend: setHeader
+  });
 }
+
+
