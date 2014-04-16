@@ -1,21 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://randybaek.github.io/blog/2011/06/01/this-is-a-test/</loc>
-        <lastmod>2014-04-15T17:35:41-04:00</lastmod>
-    </url>
-    <url>
         <loc>http://randybaek.github.io/blog/2014/02/26/coffee/</loc>
         <lastmod>2014-04-16T11:48:02-04:00</lastmod>
     </url>
     <url>
         <loc>http://randybaek.github.io/blog/2014/03/02/getting-started-with-conveyapi/</loc>
-        <lastmod>2014-04-15T17:35:41-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://randybaek.github.io/blog/2014/04/14/using-type-either-for-managing-responses/
-        </loc>
         <lastmod>2014-04-15T17:35:41-04:00</lastmod>
     </url>
     <url>
