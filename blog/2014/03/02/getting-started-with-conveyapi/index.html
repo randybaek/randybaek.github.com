@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="author" content="Randy Baek">
-  <meta name="description" content="Randy's blog">
+  <meta name="description" content="Never underestimate the power of NLP code">
 
   
     <title>Getting started with ConveyAPI - Part 1. - Randy Baek</title>
@@ -34,7 +34,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Randy's blog" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Never underestimate the power of NLP code" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -134,7 +134,7 @@
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do general sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#114;&#98;&#x61;&#101;&#107;&#x40;&#x72;&#x65;&#118;&#x65;&#97;&#108;&#101;&#100;&#99;&#111;&#110;&#116;&#101;&#x78;&#116;&#46;&#x63;&#x6f;&#109;">&#x72;&#98;&#97;&#101;&#x6b;&#x40;&#114;&#101;&#118;&#x65;&#97;&#x6c;&#101;&#x64;&#99;&#111;&#x6e;&#116;&#101;&#120;&#116;&#46;&#99;&#111;&#109;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#114;&#98;&#97;&#x65;&#x6b;&#64;&#x72;&#x65;&#x76;&#101;&#97;&#108;&#101;&#100;&#99;&#x6f;&#x6e;&#x74;&#x65;&#120;&#x74;&#46;&#x63;&#111;&#109;">&#x72;&#98;&#97;&#x65;&#107;&#64;&#x72;&#101;&#118;&#x65;&#x61;&#108;&#101;&#100;&#99;&#111;&#110;&#116;&#101;&#120;&#116;&#46;&#x63;&#x6f;&#x6d;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you obtain the key, you&rsquo;re all set!</p>
 
@@ -227,7 +227,8 @@ http://beta.conveyapi.com/analysis-engine/process?api_key=YourAPIKey&text=the+se
 Note that batch array must be indexed starting with 0, and moving up sequentially. For example,</p>
 
 <pre>
-curl -v -X POST "http://ubervu.conveyapi.com/analysis-engine/process" -d "api_key=YourAPIKey&annotation.level=sentence&annotation.polarity=true&annotation.emotion=true&annotation.intensity=true&annotation.spam=true&text=In+the+Grand+Canyon%2C+Arizona+has+a+natural+wonder+which%2C+so+far+as+I+know%2C+is+in+kind+absolutely+unparalleled+throughout+the+rest+of+the+world.+I+want+to+ask+you+to+do+one+thing+in+connection+with+it+in+your+own+interest+and+in+the+interest+of+the+country+-+to+keep+this+great+wonder+of+nature+as+it+now+is."
+curl -v -X POST "http://beta.conveyapi.com/analysis-engine/process-batch" -d 
+"api_key=YourAPIKey&annotation.level=sentence&annotation.polarity=true&annotation.emotion=true&annotation.intensity=true&annotation.spam=true&batch[0].text=In the Grand Canyon, Arizona has a natural wonder which, so far as I know, is in kind absolutely unparalleled throughout the rest of the world. I want to ask you to do one thing in connection with it in your own interest and in the interest of the country - to keep this great wonder of nature as it now is.&batch[1].text=I was delighted to learn of the wisdom of the Santa Fe railroad people in deciding not to build their hotel on the brink of the canyon. I hope you will not have a building of any kind, not a summer cottage, a hotel, or anything else, to mar the wonderful grandeur, the sublimity, the great loneliness and beauty of the canyon."
 </pre>
 
 
