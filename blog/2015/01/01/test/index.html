@@ -9,13 +9,13 @@
   <meta name="description" content="Never underestimate the power of NLP code">
 
   
-    <title>How to access glabal variable from inside of callback(javascritp) - Randy Baek</title>
+    <title>test - Randy Baek</title>
   
 
 
   
-  <meta name="description" content="app.controller(&lsquo;TextBtnCtrl&rsquo;, function($scope, $http) { var oldName = $scope.model;
-var apiKey = $scope.apiKey; $scope.checkName = &hellip;">
+  <meta name="description" content="this is testing
+">
   
 
 
@@ -26,7 +26,7 @@ var apiKey = $scope.apiKey; $scope.checkName = &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp">
+  <link rel="canonical" href="http://randybaek.github.io/blog/2015/01/01/test">
   <link href="/favicon.ico" rel="icon">
   <script type="text/javascript" src="http://use.typekit.com/zcp2xbp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
@@ -99,7 +99,7 @@ var apiKey = $scope.apiKey; $scope.checkName = &hellip;">
   
   <header>
     
-      <h1 class="entry-title">How to Access Glabal Variable From Inside of Callback(javascritp)</h1>
+      <h1 class="entry-title">Test</h1>
     
     
       <p class="meta">
@@ -112,7 +112,7 @@ var apiKey = $scope.apiKey; $scope.checkName = &hellip;">
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/" data-via="randy_baek" data-counturl="http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://randybaek.github.io/blog/2015/01/01/test/" data-via="randy_baek" data-counturl="http://randybaek.github.io/blog/2015/01/01/test/" >Tweet</a>
   
   
   
@@ -121,82 +121,15 @@ var apiKey = $scope.apiKey; $scope.checkName = &hellip;">
     
 
 
-<div class="entry-content"><p>app.controller(&lsquo;TextBtnCtrl&rsquo;, function($scope, $http) {</p>
-
-<pre><code>var oldName = $scope.model;
-var apiKey = $scope.apiKey;
-
-$scope.checkName = function(data) {
-
-    // call check model name api with data and returns status code and or error messages
-    $http({
-            method: 'POST',
-            url: '/model/checkModelName',
-            data: {"apiKey": apiKey.toString(), "modelName": data},
-            headers:{'Content-Type': 'application/json'}
-        }
-    ).success(function ( data, status)  {
-            console.log("Success!");
-            console.log(data);
-            console.log(status);
-            var result = parseInt(status)
-
-
-            if ( result == 200 ) {
-                console.log("returned 200");
-                console.log(data['message']);
-                if ( data['status'] == 'OK' ) {
-                    console.log("valid name");
-                    $scope.rv =  "this name is valid.";
-                } else {
-                    console.log("invalid name");
-                    $scope.rv = "this name is invalid.";
-
-                }
-
-            }
-
-        }).
-
-        error(function(status, message) {
-            console.log(message);
-            console.log("error");
-        }
-
-    )
-    console.log("BAM " + $scope.rv);
-    return $scope.rv;
-</code></pre>
-
-<p>//        if ( result == &ldquo;&rdquo; || result == null ) {
-//            return &ldquo;Invalid model name!&rdquo;;
-//        }</p>
-
-<pre><code>};
-
-$scope.updateModelName = function(newName) {
-    //console.log(oldName + " " + newName + " " + apiKey);
-    //return $http.post('/model/renameModel', {"apiKey": apiKey, "oldName": oldName, "newName": newName});
-    return $http({
-        method: 'POST',
-        url: '/model/renameModel',
-        data: {"apiKey": apiKey.toString(), "oldName": oldName, "newName": newName},
-        headers:{'Content-Type': 'application/json'}
-    });
-};
-</code></pre>
-
-<p>});</p>
+<div class="entry-content"><p>this is testing</p>
 </div>
 
 
   <footer>
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/02/getting-started-with-conveyapi/" title="Previous Post: Getting started with ConveyAPI - Part 1.">&laquo; Previous post</a>
+        <a class="basic-alignment left" href="/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/" title="Previous Post: How to access glabal variable from inside of callback(javascritp)">&laquo; Previous post</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/01/01/test/" title="next Post: test">Next post &raquo;</a>
       
     </p>
   </footer>
@@ -227,8 +160,8 @@ $scope.updateModelName = function(newName) {
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/';
-        var disqus_url = 'http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/';
+        var disqus_identifier = 'http://randybaek.github.io/blog/2015/01/01/test/';
+        var disqus_url = 'http://randybaek.github.io/blog/2015/01/01/test/';
         var disqus_script = 'embed.js';
       
     (function () {
