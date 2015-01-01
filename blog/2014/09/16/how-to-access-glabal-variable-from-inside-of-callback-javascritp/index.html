@@ -9,14 +9,13 @@
   <meta name="description" content="Never underestimate the power of NLP code">
 
   
-    <title>Blog Archives - Randy Baek</title>
+    <title>How to access glabal variable from inside of callback(javascritp) - Randy Baek</title>
   
 
 
   
-  <meta name="description" content=" Sep 16 2014
-&nbsp; How to access glabal variable from inside of callback(javascritp) Mar 02 2014
-&nbsp; Getting started with ConveyAPI - Part 1. ">
+  <meta name="description" content="app.controller(&lsquo;TextBtnCtrl&rsquo;, function($scope, $http) { var oldName = $scope.model;
+var apiKey = $scope.apiKey; $scope.checkName = &hellip;">
   
 
 
@@ -27,7 +26,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://randybaek.github.io/archives">
+  <link rel="canonical" href="http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp">
   <link href="/favicon.ico" rel="icon">
   <script type="text/javascript" src="http://use.typekit.com/zcp2xbp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>  
@@ -93,36 +92,121 @@
     
     
 
-    <header class="twelve columns" role="banner">
-    
-<hgroup>
-  <h1>Never underestimate the power of NLP code</h1>
-</hgroup>
-
-    </header>
-
-    
-
   	<div id="main" class="twelve columns">
 	    <div id="content">
-	      
-	
+	      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to Access Glabal Variable From Inside of Callback(javascritp)</h1>
+    
+    
+      <p class="meta">
+        
+      </p>
+    
+  </header>
 
 
-  <time datetime="2014-09-16T01:29:57-04:00" pubdate><span class='month'>Sep</span> <span class='day'>16</span> <span class='year'>2014</span></time>
-&nbsp;
-  <h1><a href="/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/">How to access glabal variable from inside of callback(javascritp)</a></h1>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/" data-via="randy_baek" data-counturl="http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
 
 
+<div class="entry-content"><p>app.controller(&lsquo;TextBtnCtrl&rsquo;, function($scope, $http) {</p>
 
-	
+<pre><code>var oldName = $scope.model;
+var apiKey = $scope.apiKey;
+
+$scope.checkName = function(data) {
+
+    // call check model name api with data and returns status code and or error messages
+    $http({
+            method: 'POST',
+            url: '/model/checkModelName',
+            data: {"apiKey": apiKey.toString(), "modelName": data},
+            headers:{'Content-Type': 'application/json'}
+        }
+    ).success(function ( data, status)  {
+            console.log("Success!");
+            console.log(data);
+            console.log(status);
+            var result = parseInt(status)
 
 
-  <time datetime="2014-03-02T15:35:45-05:00" pubdate><span class='month'>Mar</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-&nbsp;
-  <h1><a href="/blog/2014/03/02/getting-started-with-conveyapi/">Getting started with ConveyAPI - Part 1.</a></h1>
+            if ( result == 200 ) {
+                console.log("returned 200");
+                console.log(data['message']);
+                if ( data['status'] == 'OK' ) {
+                    console.log("valid name");
+                    $scope.rv =  "this name is valid.";
+                } else {
+                    console.log("invalid name");
+                    $scope.rv = "this name is invalid.";
+
+                }
+
+            }
+
+        }).
+
+        error(function(status, message) {
+            console.log(message);
+            console.log("error");
+        }
+
+    )
+    console.log("BAM " + $scope.rv);
+    return $scope.rv;
+</code></pre>
+
+<p>//        if ( result == &ldquo;&rdquo; || result == null ) {
+//            return &ldquo;Invalid model name!&rdquo;;
+//        }</p>
+
+<pre><code>};
+
+$scope.updateModelName = function(newName) {
+    //console.log(oldName + " " + newName + " " + apiKey);
+    //return $http.post('/model/renameModel', {"apiKey": apiKey, "oldName": oldName, "newName": newName});
+    return $http({
+        method: 'POST',
+        url: '/model/renameModel',
+        data: {"apiKey": apiKey.toString(), "oldName": oldName, "newName": newName},
+        headers:{'Content-Type': 'application/json'}
+    });
+};
+</code></pre>
+
+<p>});</p>
+</div>
 
 
+  <footer>
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/02/getting-started-with-conveyapi/" title="Previous Post: Getting started with ConveyAPI - Part 1.">&laquo; Previous post</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1 class="comments">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
 
 	    </div>
   	</div>
@@ -140,7 +224,10 @@
       var disqus_shortname = 'randybaek';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/';
+        var disqus_url = 'http://randybaek.github.io/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

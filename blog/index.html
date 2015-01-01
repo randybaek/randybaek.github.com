@@ -14,7 +14,8 @@
 
 
   
-  <meta name="description" content="Revealed Context provides a proven mix of text analytics and machine learning techniques so that your data can be analyzed with the highest accuracy &hellip;">
+  <meta name="description" content="app.controller(&lsquo;TextBtnCtrl&rsquo;, function($scope, $http) { var oldName = $scope.model;
+var apiKey = $scope.apiKey; $scope.checkName = &hellip;">
   
 
 
@@ -99,6 +100,104 @@
     <article class="post">
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/09/16/how-to-access-glabal-variable-from-inside-of-callback-javascritp/">How to Access Glabal Variable From Inside of Callback(javascritp)</a></h1>
+    
+    
+      <p class="meta">
+        
+      </p>
+    
+  </header>
+
+
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://randybaek.github.io/blog/index.html" data-via="randy_baek" data-counturl="http://randybaek.github.io/blog/index.html" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+
+
+  <div class="entry-content"><p>app.controller(&lsquo;TextBtnCtrl&rsquo;, function($scope, $http) {</p>
+
+<pre><code>var oldName = $scope.model;
+var apiKey = $scope.apiKey;
+
+$scope.checkName = function(data) {
+
+    // call check model name api with data and returns status code and or error messages
+    $http({
+            method: 'POST',
+            url: '/model/checkModelName',
+            data: {"apiKey": apiKey.toString(), "modelName": data},
+            headers:{'Content-Type': 'application/json'}
+        }
+    ).success(function ( data, status)  {
+            console.log("Success!");
+            console.log(data);
+            console.log(status);
+            var result = parseInt(status)
+
+
+            if ( result == 200 ) {
+                console.log("returned 200");
+                console.log(data['message']);
+                if ( data['status'] == 'OK' ) {
+                    console.log("valid name");
+                    $scope.rv =  "this name is valid.";
+                } else {
+                    console.log("invalid name");
+                    $scope.rv = "this name is invalid.";
+
+                }
+
+            }
+
+        }).
+
+        error(function(status, message) {
+            console.log(message);
+            console.log("error");
+        }
+
+    )
+    console.log("BAM " + $scope.rv);
+    return $scope.rv;
+</code></pre>
+
+<p>//        if ( result == &ldquo;&rdquo; || result == null ) {
+//            return &ldquo;Invalid model name!&rdquo;;
+//        }</p>
+
+<pre><code>};
+
+$scope.updateModelName = function(newName) {
+    //console.log(oldName + " " + newName + " " + apiKey);
+    //return $http.post('/model/renameModel', {"apiKey": apiKey, "oldName": oldName, "newName": newName});
+    return $http({
+        method: 'POST',
+        url: '/model/renameModel',
+        data: {"apiKey": apiKey.toString(), "oldName": oldName, "newName": newName},
+        headers:{'Content-Type': 'application/json'}
+    });
+};
+</code></pre>
+
+<p>});</p>
+</div>
+  
+  
+
+</article>
+
+
+    <article class="post">
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/03/02/getting-started-with-conveyapi/">Getting Started With ConveyAPI - Part 1.</a></h1>
     
     
@@ -135,7 +234,7 @@
 
 <p>Today, I&rsquo;ll explain just how to use general sentiment analysis with ConveyAPI which is already trained by tons of training data. So, you can start analyzing your data right away without training anything. Of course, it won&rsquo;t be optimized for your specific domain, but it will do general sentment analysis, such as polarity, emotion, intensity, and spam.</p>
 
-<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#114;&#98;&#97;&#x65;&#x6b;&#64;&#x72;&#x65;&#x76;&#101;&#97;&#108;&#101;&#100;&#99;&#x6f;&#x6e;&#x74;&#x65;&#120;&#x74;&#46;&#x63;&#111;&#109;">&#x72;&#98;&#97;&#x65;&#107;&#64;&#x72;&#101;&#118;&#x65;&#x61;&#108;&#101;&#100;&#99;&#111;&#110;&#116;&#101;&#120;&#116;&#46;&#x63;&#x6f;&#x6d;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
+<p>First, you need a API key to get authenticated for REST API service use. For now, just email me (<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#114;&#x62;&#97;&#x65;&#x6b;&#64;&#114;&#x65;&#118;&#101;&#x61;&#x6c;&#101;&#100;&#99;&#x6f;&#x6e;&#x74;&#101;&#120;&#116;&#x2e;&#99;&#x6f;&#109;">&#x72;&#98;&#x61;&#x65;&#x6b;&#64;&#114;&#101;&#x76;&#x65;&#x61;&#x6c;&#x65;&#100;&#99;&#x6f;&#x6e;&#x74;&#101;&#x78;&#116;&#x2e;&#x63;&#x6f;&#109;</a>) and I&rsquo;ll create free testing account for you. Remember! Don&rsquo;t share any of your API keys with anyone.</p>
 
 <p>Once you obtain the key, you&rsquo;re all set!</p>
 
